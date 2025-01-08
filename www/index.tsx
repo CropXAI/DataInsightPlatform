@@ -29,7 +29,6 @@ export const handler = define.handlers({
     ctx.state.title = "РОСТ Х - Множитель роста";
     ctx.state.description =
       "Начните рост с теста микробиома почвы по спец. цене 7999 р 6749 р Узнайте подробнее →";
-    /* ctx.state.ogImage = new URL(asset("/og-image.webp"), ctx.url).href; */
 
     return page();
   },
@@ -57,10 +56,8 @@ export default define.page<typeof handler>(function MainPage(props) {
   return (
     <div class="flex flex-col min-h-screen">
       <div class="bg-transparent flex flex-col relative z-10">
-        {/* <HelloBar /> */}
 
         <Header title="" active="/" />
-        {/* <SearchDialog /> */}
       </div>
       <div class="flex flex-col -mt-20 relative">
         <Hero origin={origin} />
@@ -97,29 +94,10 @@ export default define.page<typeof handler>(function MainPage(props) {
                 ))}
               </ul>
               {
-                /* <a
-                                href="https://deno.com/blog?tag=jsr"
-                                class="underline block mt-4 w-full text-center"
-                            >
-                                More JSR updates{" "}
-                                <span aria-hidden="true">&rsaquo;</span>
-                            </a> */
               }
             </section>
           )}
         </div>
-        {/*  <Simple /> */}
-        {
-          /*  <RenderingSection />
-        <IslandsSection />
-        <FormsSection />  */
-        }
-        {
-          /* <PartialsSection />
-        <SocialProof />
-        <DenoSection /> */
-        }
-        {/* <CTA /> */}
       </div>
       <FancyLink
         href="https://chat.cropxai.com"
