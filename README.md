@@ -120,7 +120,7 @@ python data_colection.py
 ## 📚 Полезные ссылки  
 - [**Введение**](https://cropxai.com/docs/introduction)  
 - [**Визуализация результатов (чат)**](https://chat.cropx.ai)  
-- [**Product page**](https://cropxai.com)
+- [**Главная страница**](https://cropxai.com)
 
 ---
 
