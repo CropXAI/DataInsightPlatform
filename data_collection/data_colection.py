@@ -2,6 +2,11 @@ import requests
 from bs4 import BeautifulSoup
 import csv
 import pandas as pd
+from supabase import create_client, Client
+
+url = "*"  # URL проекта Supabase
+key = "*"  # Секретный ключ API
+supabase: Client = create_client(url, key)
 
 data = pd.read_csv('../data/data_fertilizers.csv')
 data_uralhim = data.query('Производители == "Уралхим"')
@@ -157,4 +162,13 @@ with open(output_csv_file, mode="w", encoding="utf-8", newline="") as file:
         else:
             print(f"Ошибка загрузки страницы {url}: {response.status_code}")
 
-print(f"Все данные успешно записаны в файл {output_csv_file}")
+def insert_data_to_supabase(dataframe, table_name):
+    for _, row in dataframe.iterrows():
+        # Преобразуем строку в словарь
+        row_data = row.to_dict()
+        # Вставляем данные в таблицу Supabase
+        response = supabase.table(table_name).insert(row_data).execute()
+
+table_name = "fertilizers"  # Замените на ваше название таблицы
+data = pd.read_csv('composition_all.csv')
+insert_data_to_supabase(data, table_name)
