@@ -1,5 +1,6 @@
 import re
 import pandas as pd
+from dq_config import RULES
 
 def validate_dataframe(df, rules):
     report = []
