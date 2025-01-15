@@ -118,7 +118,7 @@ python data_colection.py
 
 ## 📚 Полезные ссылки  
 - [**Документация**](https://cropxai.com/docs/introduction)  
-- [**Визуализация результатов (чат)**](https://chat.cropx.ai)  
+- [**Визуализация результатов (чат)**](https://chat.cropxai.com)  
 - [**Презинтация**](https://docs.google.com/presentation/d/1Z-2PR0b9G4puh8rumHTgcBfDzGTPqgrb/edit?usp=sharing&ouid=107598273093656362881&rtpof=true&sd=true)
 - [**База данных Supabase**](https://supabase.com/dashboard/project/kvvubjqhqhkkxktoavre/editor/29229?schema=public)
 ---
